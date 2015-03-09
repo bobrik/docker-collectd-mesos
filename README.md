@@ -29,7 +29,7 @@ docker run -d -e GRAPHITE_HOST=<graphite host> -e MESOS_MODE=slave \
 * `GRAPHITE_PREFIX` - prefix for metrics in graphite, `collectd.` by default.
 * `MESOS_MODE` - mesos node type: `master` or `slave`.
 * `MESOS_HOST` - mesos host to monitor.
-* `ES_PORT` - mesos port number, likely `5050` for master and `5051` for slave.
+* `MESOS_PORT` - mesos port number, likely `5050` for master and `5051` for slave.
 * `MESOS_VERSION` - mesos version to enable version-specific metrics.
 
 Note that this docker image is very minimal and libc inside does not
