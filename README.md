@@ -23,6 +23,7 @@ docker run -d -e GRAPHITE_HOST=<graphite host> -e MESOS_MODE=slave \
 
 ### Environment variables
 
+* `COLLECTD_HOST` - host to use in metric name, defaults to the value of `MESOS_HOST`.
 * `GRAPHITE_HOST` - host where carbon is listening for data.
 * `GRAPHITE_PORT` - port where carbon is listening for data, `2003` by default.
 * `GRAPHITE_PREFIX` - prefix for metrics in graphite, `collectd.` by default.
@@ -33,7 +34,7 @@ docker run -d -e GRAPHITE_HOST=<graphite host> -e MESOS_MODE=slave \
 
 Note that this docker image is very minimal and libc inside does not
 support `search` directive in `/etc/resolv.conf`. You have to supply
-full domain names that can be resolved with nameserver.
+full hostname in `MESOS_HOST` that can be resolved with nameserver.
 
 # Authors
 
