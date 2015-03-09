@@ -6,7 +6,7 @@ RUN apk-install collectd collectd-python py-pip && \
 ADD collectd.conf.tpl /etc/collectd/collectd.conf.tpl
 
 RUN apk-install git && \
-    git clone -b mesos-slave-support https://github.com/rayrod2030/collectd-mesos.git /usr/share/collectd/plugins/mesos && \
+    git clone https://github.com/rayrod2030/collectd-mesos.git /usr/share/collectd/plugins/mesos && \
     apk del git
 
 ADD ./run.sh /run.sh
