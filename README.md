@@ -36,6 +36,12 @@ Note that this docker image is very minimal and libc inside does not
 support `search` directive in `/etc/resolv.conf`. You have to supply
 full hostname in `MESOS_HOST` that can be resolved with nameserver.
 
+## Grafana dashboard
+
+Get example [grafana dashboard](grafana-dashboard.json):
+
+![Screenshot](screenshot.png)
+
 # Authors
 
 * [Ian Babrou](https://github.com/bobrik)
