@@ -10,29 +10,6 @@
   "sharedCrosshair": false,
   "rows": [
     {
-      "title": "Welcome to Grafana",
-      "height": "50px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": true,
-          "type": "text",
-          "loadingEditor": false,
-          "mode": "markdown",
-          "content": "Метрики кластера mesos. Бобров.",
-          "style": {},
-          "title": "Description",
-          "id": 1,
-          "links": []
-        }
-      ],
-      "notice": false
-    },
-    {
       "title": "Essential response time",
       "height": "250px",
       "editable": true,
@@ -660,7 +637,7 @@
     }
   ],
   "time": {
-    "from": "now-3h",
+    "from": "now-12h",
     "to": "now"
   },
   "templating": {
