@@ -5,6 +5,7 @@ Interval 10
 Timeout 2
 ReadThreads 5
 
+{% if GRAPHITE_HOST is defined %}
 LoadPlugin write_graphite
 <Plugin "write_graphite">
     <Carbon>
@@ -17,6 +18,14 @@ LoadPlugin write_graphite
         SeparateInstances true
     </Carbon>
 </Plugin>
+{% endif %}
+
+{% if INFLUXDB_HOST is defined %}
+LoadPlugin network
+<Plugin "network">
+    Server "{{ INFLUXDB_HOST }}" "{{ INFLUXDB_PORT | default("25826") }}"
+</Plugin>
+{% endif %}
 
 <LoadPlugin "python">
     Globals true
