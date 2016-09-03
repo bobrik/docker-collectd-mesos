@@ -27,6 +27,8 @@ docker run -d -e GRAPHITE_HOST=<graphite host> -e MESOS_MODE=slave \
 * `GRAPHITE_HOST` - host where carbon is listening for data.
 * `GRAPHITE_PORT` - port where carbon is listening for data, `2003` by default.
 * `GRAPHITE_PREFIX` - prefix for metrics in graphite, `collectd.` by default.
+* `INFLUXDB_HOST` - host where influxdb is listening for data.
+* `INFLUXDB_PORT` - port where influxdb is listening for data, `25826` by default.
 * `MESOS_MODE` - mesos node type: `master` or `slave`.
 * `MESOS_HOST` - mesos host to monitor.
 * `MESOS_PORT` - mesos port number, likely `5050` for master and `5051` for slave.
