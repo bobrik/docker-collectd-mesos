@@ -1,7 +1,7 @@
 Hostname "{{ COLLECTD_HOST | default(MESOS_HOST) }}"
 
 FQDNLookup false
-Interval 10
+Interval {{ COLLECTD_INTERVAL | default("10") }}
 Timeout 2
 ReadThreads 5
 
