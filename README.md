@@ -33,6 +33,7 @@ docker run -d -e GRAPHITE_HOST=<graphite host> -e MESOS_MODE=slave \
 * `MESOS_HOST` - mesos host to monitor.
 * `MESOS_PORT` - mesos port number, likely `5050` for master and `5051` for slave.
 * `MESOS_VERSION` - mesos version to enable version-specific metrics.
+* `VERBOSE_LOGGING` - logging toggle, can be `true` or `false`, `false` by default.
 
 Note that this docker image is very minimal and libc inside does not
 support `search` directive in `/etc/resolv.conf`. You have to supply
