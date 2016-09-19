@@ -38,7 +38,7 @@ LoadPlugin network
     <Module "mesos-{{ MESOS_MODE }}">
         Host "{{ MESOS_HOST }}"
         Port {{ MESOS_PORT }}
-        Verbose false
+        Verbose {{ VERBOSE_LOGGING | default("false") }}
         Version "{{ MESOS_VERSION }}"
     </Module>
 </Plugin>
